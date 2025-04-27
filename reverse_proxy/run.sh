@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bashio
+#!/bin/sh
 
 PORT=$(bashio::config 'port')
 
