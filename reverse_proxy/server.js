@@ -1,3 +1,5 @@
+const fs = require('fs');
+const https = require('https');
 const express = require('express');
 const compression = require('compression');
 const morgan = require('morgan');
@@ -5,6 +7,9 @@ const zlib = require('zlib');
 const app = express();
 
 const PORT = parseInt(process.env.PORT) || 3000;
+
+const privateKey = fs.readFileSync('/usr/src/app/key.pem', 'utf8');
+const certificate = fs.readFileSync('/usr/src/app/cert.pem', 'utf8');
 
 app.use(compression());
 app.use(morgan('tiny'));
@@ -121,6 +126,8 @@ app.use(async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Proxy running on port ${PORT}`);
+const credentials = { key: privateKey, cert: certificate };
+
+https.createServer(credentials, app).listen(PORT, () => {
+  console.log(`HTTPS Proxy running on port ${PORT}`);
 });

@@ -7,9 +7,11 @@ RUN npm install
 
 COPY server.js .
 COPY run.sh .
+COPY cert.pem .
+COPY key.pem .
 
-RUN chmod a+x /usr/src/app/run.sh
+RUN sed -i 's/\r$//' run.sh && chmod +x run.sh
 
 EXPOSE 3000
 
-ENTRYPOINT [ "/usr/src/app/run.sh" ]
+ENTRYPOINT ["/usr/src/app/run.sh"]
