@@ -1,0 +1,22 @@
+name: "HA CORS iframe Proxy"
+version: "1.0.0"
+slug: "ha_cors_iframe_proxy"
+description: "Proxy server to bypass CORS"
+startup: services
+boot: auto
+init: false
+options:
+  port: 3000
+schema:
+  port: port
+ports:
+  3000/tcp: 3000
+
+arch:
+  - amd64
+  - aarch64
+  - armv7
+  - i386
+
+logo: "logo.png"
+icon: "icon.png"
