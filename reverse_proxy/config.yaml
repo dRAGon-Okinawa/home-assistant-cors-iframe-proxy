@@ -11,6 +11,8 @@ schema:
   port: port
 ports:
   3000/tcp: 3000
+map:
+  - ssl:ro
 
 arch:
   - amd64

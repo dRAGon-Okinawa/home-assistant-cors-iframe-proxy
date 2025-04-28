@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.1.0 (2025-04-28)
+- Using same SSL certificate as Home Assistant (from Let's Encrypt add-on)
+
 ## 1.0.0 (2025-04-27)
 - Initial release
 - Proxy functionality

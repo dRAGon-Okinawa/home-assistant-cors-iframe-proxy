@@ -8,8 +8,9 @@ const app = express();
 
 const PORT = parseInt(process.env.PORT) || 3000;
 
-const privateKey = fs.readFileSync('/usr/src/app/key.pem', 'utf8');
-const certificate = fs.readFileSync('/usr/src/app/cert.pem', 'utf8');
+// Load Let's Encrypt certs
+const privateKey = fs.readFileSync('/ssl/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/ssl/fullchain.pem', 'utf8');
 
 app.use(compression());
 app.use(morgan('tiny'));
