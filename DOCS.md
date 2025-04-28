@@ -28,3 +28,17 @@ Add this GitHub repository to your Home Assistant instance:
 - Jump to the Configuration section
 - Fill in the configuration options
 - Start the Add-on
+
+## Example Usage
+
+To proxy a URL with CORS bypass, use the following format:
+
+```bash
+https://your-ha-ip:3000/?target=https://example.com/
+```
+
+To proxy an Image using the `mode=embed` option, use:
+
+```bash
+https://your-ha-ip:3000/?target=https://example.com/image.jpg&mode=embed
+```
