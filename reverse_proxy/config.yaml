@@ -1,5 +1,5 @@
 name: "HA CORS iframe Proxy"
-version: "1.0.3"
+version: "1.1.0"
 slug: "ha_cors_iframe_proxy"
 description: "Proxy server to bypass CORS"
 startup: services
