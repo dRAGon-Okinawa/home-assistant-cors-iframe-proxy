@@ -28,11 +28,11 @@ This Home Assistant Add-on provides a simple reverse proxy server to:
 To proxy a URL with CORS bypass, use the following format:
 
 ```bash
-http://your-ha-ip:3000/?target=https://example.com/
+https://your-ha-ip:3000/?target=https://example.com/
 ```
 
 To proxy an Image using the `mode=embed` option, use:
 
 ```bash
-http://your-ha-ip:3000/?target=https://example.com/image.jpg&mode=embed
+https://your-ha-ip:3000/?target=https://example.com/image.jpg&mode=embed
 ```
